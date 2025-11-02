@@ -1,0 +1,14 @@
+# b7sxxx-user 16 BP2A.250605.031.A3 F766BXXS5AYJ3 release-keys
+- manufacturer: samsung
+- platform: erd9955
+- codename: b7s
+- flavor: b7sxxx-user
+- release: 16
+- id: BP2A.250605.031.A3
+- incremental: F766BXXS5AYJ3
+- tags: release-keys
+- fingerprint: samsung/b7sxxx/b7s:15/AP3A.240905.015.A2/F766BXXS5AYJ3:user/release-keys
+- is_ab: true
+- brand: samsung
+- branch: b7sxxx-user-16-BP2A.250605.031.A3-F766BXXS5AYJ3-release-keys-
+- repo: samsung_b7s_dump

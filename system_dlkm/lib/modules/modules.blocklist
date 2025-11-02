@@ -1,0 +1,2 @@
+blocklist ptp_kvm.ko
+blocklist zram.ko
