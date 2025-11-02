@@ -1,0 +1,6 @@
+service vendor.keymint-strongbox /vendor/bin/hw/android.hardware.security.keymint-service.strongbox-knoxvault
+    class early_hal
+    user system
+    group system
+
+# Data directory will be initialized by default keymint service.

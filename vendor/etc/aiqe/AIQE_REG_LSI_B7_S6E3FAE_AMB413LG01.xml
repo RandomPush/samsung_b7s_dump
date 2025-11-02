@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AIQE version="1" project="B7S_SUB">
+    <REG version="1">
+        <MDNIE base_offset="0x0100" total_length="476">
+            <reg name="mdnie" offset="0x0000" length="476"/>
+            <reg name="ascr_wide" offset="0x00F8" length="36"/>
+            <reg name="ascr_skin" offset="0x00F8" length="12"/>
+            <reg name="gc" offset="0x0008" length="20"/>
+            <reg name="linear_skin" offset="0x0E0" length="1"/>
+            <reg name="ascr_wr" offset="0x0116" length="1"/>
+            <reg name="ascr_wg" offset="0x0118" length="1"/>
+            <reg name="ascr_wb" offset="0x011A" length="1"/>
+        </MDNIE>
+        <COPR base_offset="0x0300" total_length="68">
+            <reg name="copr" offset="0x0000" length="68"/>
+        </COPR>
+        <SSRC base_offset="0x0100" total_length="80">
+            <reg name="ssrc" offset="0x0000" length="80"/>
+        </SSRC>
+        <ABC base_offset="0x30" total_length="176">
+            <reg name="abc" offset="0x0000" length="176"/>
+            <reg name="scale_abc" offset="0x0010" length="72"/>
+            <reg name="scale_udc" offset="0x0068" length="72"/>
+        </ABC>
+        <SSRC_IMG base_offset="0x0000" total_length="6496">
+            <reg name="ssrc_img" offset="0x0000" length="6496"/>
+        </SSRC_IMG>
+        <ABC_IMG base_offset="0x0000" total_length="330852">
+            <reg name="abc_img" offset="0x0000" length="330852"/>
+        </ABC_IMG>
+        <SCALE_FACTOR base_offset="0x0000" total_length="5732">
+            <reg name="header" offset="0x0000" length="32"/>
+            <reg name="brt_map" offset="0x0020" length="300"/>
+            <reg name="abc_scale_factor" offset="0x014C" length="5400"/>
+        </SCALE_FACTOR>
+    </REG>
+</AIQE>

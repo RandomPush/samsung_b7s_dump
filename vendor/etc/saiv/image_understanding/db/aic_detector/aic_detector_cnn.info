@@ -1,0 +1,10 @@
+{
+	"version_id": "v9",
+	"tag" : "9.3.3",
+	"model_type" : "npu",
+	"precision" : "qasymm8",
+	"resolution" : "384",
+	"complier" : "enn_7.12",
+	"latency": "0",
+	"model_path" : "/vendor/etc/saiv/image_understanding/db/aic_detector/aic_detector_cnn.tflite"
+}

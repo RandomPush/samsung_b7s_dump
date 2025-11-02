@@ -1,0 +1,437 @@
+{
+    "lens" : {
+        "support_lens_distortion_correction" : true,
+        "smooth_ratio" : 0.0,
+        "crop_ratio_width" : 0.0261842,
+        "crop_ratio_height" : 0.02581871,
+        "parameter" : {
+            "k0" : 0.000016341735407,
+            "k1" : -0.080503654826301,
+            "k2" : 2.513536368367785,
+            "k3" : -14.361665933375816,
+            "k4" : 40.372852831130842,
+            "k5" : -60.664036862737888,
+            "k6" : 46.264850192549900,
+            "k7" : -14.034812815117869,
+            "p1" : 0.0,
+            "p2" : 0.0
+        }
+    },
+
+    "sensor" : {
+        "id" : 137,
+        "type" : 16,
+        "is_ois" : false,
+        "width" : 3648,
+        "height" : 2052,
+        "crop_width" : 3648,
+        "crop_height" : 2052,
+        "focal_mm" : 2.7,
+        "diagonal" : 5.1072,
+        "ratio_width" : 4.0,
+        "ratio_height" : 3.0,
+        "ratio_diagonal" : 5.0,
+        "tuning" : {
+            "crop_ratio_width" : 0.16666667,
+            "crop_ratio_height" : 0.16666667,
+            "margin_reduction_width" : 0.0,
+            "margin_reduction_height" : 0.0,
+            "gyro_timeoffset" : 0.001,
+            "ois_timeoffset" : 0.000,
+            "process_order" : [ 0, 1, 2 ],
+            "proximity_constraint" : [ 0.20, 0.15, 0.00 ],
+            "intra_frame_scale" : 0.15
+        }
+    },
+
+    "fhd" : {
+        "30fps" : {
+            "1_1" : {
+                "sensor" : {
+                    "id" : 137,
+                    "type" : 16,
+                    "is_ois" : false,
+                    "width" : 3648,
+                    "height" : 2736,
+                    "crop_width" : 2736,
+                    "crop_height" : 2736,
+                    "focal_mm" : 2.7,
+                    "diagonal" : 5.1072,
+                    "ratio_width" : 4.0,
+                    "ratio_height" : 3.0,
+                    "ratio_diagonal" : 5.0,
+                    "tuning" : {
+                        "crop_ratio_width" : 0.16666667,
+                        "crop_ratio_height" : 0.16666667,
+                        "margin_reduction_width" : 0.0,
+                        "margin_reduction_height" : 0.0,
+                        "gyro_timeoffset" : 0.001,
+                        "ois_timeoffset" : 0.000,
+                        "process_order" : [ 0, 1, 2 ],
+                        "proximity_constraint" : [ 0.20, 0.15, 0.00 ],
+                        "intra_frame_scale" : 0.15
+                    }
+                }
+            },
+            "4_3" : {
+                "sensor" : {
+                    "id" : 137,
+                    "type" : 16,
+                    "is_ois" : false,
+                    "width" : 3648,
+                    "height" : 2736,
+                    "crop_width" : 3648,
+                    "crop_height" : 2736,
+                    "focal_mm" : 2.7,
+                    "diagonal" : 5.1072,
+                    "ratio_width" : 4.0,
+                    "ratio_height" : 3.0,
+                    "ratio_diagonal" : 5.0,
+                    "tuning" : {
+                        "crop_ratio_width" : 0.16666667,
+                        "crop_ratio_height" : 0.16666667,
+                        "margin_reduction_width" : 0.0,
+                        "margin_reduction_height" : 0.0,
+                        "gyro_timeoffset" : 0.001,
+                        "ois_timeoffset" : 0.000,
+                        "process_order" : [ 0, 1, 2 ],
+                        "proximity_constraint" : [ 0.20, 0.15, 0.00 ],
+                        "intra_frame_scale" : 0.15
+                    }
+                }
+            },
+            "16_9" : {
+                "sensor" : {
+                    "id" : 137,
+                    "type" : 16,
+                    "is_ois" : false,
+                    "width" : 3648,
+                    "height" : 2052,
+                    "crop_width" : 3648,
+                    "crop_height" : 2052,
+                    "focal_mm" : 2.7,
+                    "diagonal" : 5.1072,
+                    "ratio_width" : 4.0,
+                    "ratio_height" : 3.0,
+                    "ratio_diagonal" : 5.0,
+                    "tuning" : {
+                        "crop_ratio_width" : 0.16666667,
+                        "crop_ratio_height" : 0.16666667,
+                        "margin_reduction_width" : 0.0,
+                        "margin_reduction_height" : 0.0,
+                        "gyro_timeoffset" : 0.001,
+                        "ois_timeoffset" : 0.000,
+                        "process_order" : [ 0, 1, 2 ],
+                        "proximity_constraint" : [ 0.20, 0.15, 0.00 ],
+                        "intra_frame_scale" : 0.15
+                    }
+                }
+            },
+            "9_16" : {
+                "sensor" : {
+                    "id" : 137,
+                    "type" : 16,
+                    "is_ois" : false,
+                    "width" : 3648,
+                    "height" : 2052,
+                    "crop_width" : 3648,
+                    "crop_height" : 2052,
+                    "focal_mm" : 2.7,
+                    "diagonal" : 5.1072,
+                    "ratio_width" : 4.0,
+                    "ratio_height" : 3.0,
+                    "ratio_diagonal" : 5.0,
+                    "tuning" : {
+                        "crop_ratio_width" : 0.16666667,
+                        "crop_ratio_height" : 0.16666667,
+                        "margin_reduction_width" : 0.0,
+                        "margin_reduction_height" : 0.0,
+                        "gyro_timeoffset" : 0.001,
+                        "ois_timeoffset" : 0.000,
+                        "process_order" : [ 0, 1, 2 ],
+                        "proximity_constraint" : [ 0.20, 0.15, 0.00 ],
+                        "intra_frame_scale" : 0.15
+                    }
+                }
+            },
+            "21_9" : {
+                "sensor" : {
+                    "id" : 137,
+                    "type" : 16,
+                    "is_ois" : false,
+                    "width" : 3648,
+                    "height" : 2052,
+                    "crop_width" : 3648,
+                    "crop_height" : 1700,
+                    "focal_mm" : 2.7,
+                    "diagonal" : 5.1072,
+                    "ratio_width" : 4.0,
+                    "ratio_height" : 3.0,
+                    "ratio_diagonal" : 5.0,
+                    "tuning" : {
+                        "crop_ratio_width" : 0.16666667,
+                        "crop_ratio_height" : 0.16666667,
+                        "margin_reduction_width" : 0.0,
+                        "margin_reduction_height" : 0.0,
+                        "gyro_timeoffset" : 0.001,
+                        "ois_timeoffset" : 0.000,
+                        "process_order" : [ 0, 1, 2 ],
+                        "proximity_constraint" : [ 0.20, 0.15, 0.00 ],
+                        "intra_frame_scale" : 0.15
+                    }
+                }
+            },
+            "22_9" : {
+                "sensor" : {
+                    "id" : 137,
+                    "type" : 16,
+                    "is_ois" : false,
+                    "width" : 3648,
+                    "height" : 2052,
+                    "crop_width" : 3648,
+                    "crop_height" : 1492,
+                    "focal_mm" : 2.7,
+                    "diagonal" : 5.1072,
+                    "ratio_width" : 4.0,
+                    "ratio_height" : 3.0,
+                    "ratio_diagonal" : 5.0,
+                    "tuning" : {
+                        "crop_ratio_width" : 0.16666667,
+                        "crop_ratio_height" : 0.16666667,
+                        "margin_reduction_width" : 0.0,
+                        "margin_reduction_height" : 0.0,
+                        "gyro_timeoffset" : 0.001,
+                        "ois_timeoffset" : 0.000,
+                        "process_order" : [ 0, 1, 2 ],
+                        "proximity_constraint" : [ 0.20, 0.15, 0.00 ],
+                        "intra_frame_scale" : 0.15
+                    }
+                }
+            },
+            "full" : {
+                "sensor" : {
+                    "id" : 137,
+                    "type" : 16,
+                    "is_ois" : false,
+                    "width" : 3648,
+                    "height" : 2052,
+                    "crop_width" : 3648,
+                    "crop_height" : 1832,
+                    "focal_mm" : 2.7,
+                    "diagonal" : 5.1072,
+                    "ratio_width" : 4.0,
+                    "ratio_height" : 3.0,
+                    "ratio_diagonal" : 5.0,
+                    "tuning" : {
+                        "crop_ratio_width" : 0.16666667,
+                        "crop_ratio_height" : 0.16666667,
+                        "margin_reduction_width" : 0.0,
+                        "margin_reduction_height" : 0.0,
+                        "gyro_timeoffset" : 0.001,
+                        "ois_timeoffset" : 0.000,
+                        "process_order" : [ 0, 1, 2 ],
+                        "proximity_constraint" : [ 0.20, 0.15, 0.00 ],
+                        "intra_frame_scale" : 0.15
+                    }
+                }
+            }
+        },
+        "60fps" : {
+            "16_9" : {
+                "sensor" : {
+                    "id" : 137,
+                    "type" : 16,
+                    "is_ois" : false,
+                    "width" : 3648,
+                    "height" : 2052,
+                    "crop_width" : 3648,
+                    "crop_height" : 2052,
+                    "focal_mm" : 2.7,
+                    "diagonal" : 5.1072,
+                    "ratio_width" : 4.0,
+                    "ratio_height" : 3.0,
+                    "ratio_diagonal" : 5.0,
+                    "tuning" : {
+                        "crop_ratio_width" : 0.16666667,
+                        "crop_ratio_height" : 0.16666667,
+                        "margin_reduction_width" : 0.0,
+                        "margin_reduction_height" : 0.0,
+                        "gyro_timeoffset" : 0.001,
+                        "ois_timeoffset" : 0.000,
+                        "process_order" : [ 0, 1, 2 ],
+                        "proximity_constraint" : [ 0.20, 0.15, 0.00 ],
+                        "intra_frame_scale" : 0.15
+                    }
+                }
+            },
+            "9_16" : {
+                "sensor" : {
+                    "id" : 137,
+                    "type" : 16,
+                    "is_ois" : false,
+                    "width" : 3648,
+                    "height" : 2052,
+                    "crop_width" : 3648,
+                    "crop_height" : 2052,
+                    "focal_mm" : 2.7,
+                    "diagonal" : 5.1072,
+                    "ratio_width" : 4.0,
+                    "ratio_height" : 3.0,
+                    "ratio_diagonal" : 5.0,
+                    "tuning" : {
+                        "crop_ratio_width" : 0.16666667,
+                        "crop_ratio_height" : 0.16666667,
+                        "margin_reduction_width" : 0.0,
+                        "margin_reduction_height" : 0.0,
+                        "gyro_timeoffset" : 0.001,
+                        "ois_timeoffset" : 0.000,
+                        "process_order" : [ 0, 1, 2 ],
+                        "proximity_constraint" : [ 0.20, 0.15, 0.00 ],
+                        "intra_frame_scale" : 0.15
+                    }
+                }
+            },
+            "21_9" : {
+                "sensor" : {
+                    "id" : 137,
+                    "type" : 16,
+                    "is_ois" : false,
+                    "width" : 3648,
+                    "height" : 2052,
+                    "crop_width" : 3648,
+                    "crop_height" : 1700,
+                    "focal_mm" : 2.7,
+                    "diagonal" : 5.1072,
+                    "ratio_width" : 4.0,
+                    "ratio_height" : 3.0,
+                    "ratio_diagonal" : 5.0,
+                    "tuning" : {
+                        "crop_ratio_width" : 0.16666667,
+                        "crop_ratio_height" : 0.16666667,
+                        "margin_reduction_width" : 0.0,
+                        "margin_reduction_height" : 0.0,
+                        "gyro_timeoffset" : 0.001,
+                        "ois_timeoffset" : 0.000,
+                        "process_order" : [ 0, 1, 2 ],
+                        "proximity_constraint" : [ 0.20, 0.15, 0.00 ],
+                        "intra_frame_scale" : 0.15
+                    }
+                }
+            }
+        }
+    },
+    "4k" : {
+        "30fps" : {
+            "16_9" : {
+                "sensor" : {
+                    "id" : 137,
+                    "type" : 16,
+                    "is_ois" : false,
+                    "width" : 3648,
+                    "height" : 2052,
+                    "crop_width" : 3648,
+                    "crop_height" : 2052,
+                    "focal_mm" : 2.7,
+                    "diagonal" : 5.1072,
+                    "ratio_width" : 4.0,
+                    "ratio_height" : 3.0,
+                    "ratio_diagonal" : 5.0,
+                    "tuning" : {
+                        "crop_ratio_width" : 0.16666667,
+                        "crop_ratio_height" : 0.16666667,
+                        "margin_reduction_width" : 0.0,
+                        "margin_reduction_height" : 0.0,
+                        "gyro_timeoffset" : 0.001,
+                        "ois_timeoffset" : 0.000,
+                        "process_order" : [ 0, 1, 2 ],
+                        "proximity_constraint" : [ 0.20, 0.15, 0.00 ],
+                        "intra_frame_scale" : 0.15
+                    }
+                }
+            },
+            "21_9" : {
+                "sensor" : {
+                    "id" : 137,
+                    "type" : 16,
+                    "is_ois" : false,
+                    "width" : 3648,
+                    "height" : 2052,
+                    "crop_width" : 3648,
+                    "crop_height" : 1700,
+                    "focal_mm" : 2.7,
+                    "diagonal" : 5.1072,
+                    "ratio_width" : 4.0,
+                    "ratio_height" : 3.0,
+                    "ratio_diagonal" : 5.0,
+                    "tuning" : {
+                        "crop_ratio_width" : 0.16666667,
+                        "crop_ratio_height" : 0.16666667,
+                        "margin_reduction_width" : 0.0,
+                        "margin_reduction_height" : 0.0,
+                        "gyro_timeoffset" : 0.001,
+                        "ois_timeoffset" : 0.000,
+                        "process_order" : [ 0, 1, 2 ],
+                        "proximity_constraint" : [ 0.20, 0.15, 0.00 ],
+                        "intra_frame_scale" : 0.15
+                    }
+                }
+            }
+        },
+        "60fps" : {
+            "16_9" : {
+                "sensor" : {
+                    "id" : 137,
+                    "type" : 16,
+                    "is_ois" : false,
+                    "width" : 3648,
+                    "height" : 2052,
+                    "crop_width" : 3648,
+                    "crop_height" : 2052,
+                    "focal_mm" : 2.7,
+                    "diagonal" : 5.1072,
+                    "ratio_width" : 4.0,
+                    "ratio_height" : 3.0,
+                    "ratio_diagonal" : 5.0,
+                    "tuning" : {
+                        "crop_ratio_width" : 0.16666667,
+                        "crop_ratio_height" : 0.16666667,
+                        "margin_reduction_width" : 0.0,
+                        "margin_reduction_height" : 0.0,
+                        "gyro_timeoffset" : 0.001,
+                        "ois_timeoffset" : 0.000,
+                        "process_order" : [ 0, 1, 2 ],
+                        "proximity_constraint" : [ 0.20, 0.15, 0.00 ],
+                        "intra_frame_scale" : 0.15
+                    }
+                }
+            },
+            "21_9" : {
+                "sensor" : {
+                    "id" : 137,
+                    "type" : 16,
+                    "is_ois" : false,
+                    "width" : 3648,
+                    "height" : 2052,
+                    "crop_width" : 3648,
+                    "crop_height" : 1700,
+                    "focal_mm" : 2.7,
+                    "diagonal" : 5.1072,
+                    "ratio_width" : 4.0,
+                    "ratio_height" : 3.0,
+                    "ratio_diagonal" : 5.0,
+                    "tuning" : {
+                        "crop_ratio_width" : 0.16666667,
+                        "crop_ratio_height" : 0.16666667,
+                        "margin_reduction_width" : 0.0,
+                        "margin_reduction_height" : 0.0,
+                        "gyro_timeoffset" : 0.001,
+                        "ois_timeoffset" : 0.000,
+                        "process_order" : [ 0, 1, 2 ],
+                        "proximity_constraint" : [ 0.20, 0.15, 0.00 ],
+                        "intra_frame_scale" : 0.15
+                    }
+                }
+            }
+        }
+    }
+}

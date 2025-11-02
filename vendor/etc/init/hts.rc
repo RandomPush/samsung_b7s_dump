@@ -1,0 +1,13 @@
+on post-fs-data
+# HTS interfaces
+    chown system system /dev/hts
+    chown system system /sys/devices/platform/hts/knob/extended_control
+    chown system system /sys/devices/platform/hts/knob/extended_control2
+
+# hts daemon
+service htsd /vendor/bin/htsd -p /vendor/etc/hts.json
+    class main
+    user system
+    group system
+    seclabel u:r:htsd:s0
+    capabilities SYS_ADMIN

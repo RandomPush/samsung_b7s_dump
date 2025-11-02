@@ -1,0 +1,9 @@
+{
+	"version_id": "v9",
+	"tag" : "9.3.3",
+	"model_type" : "npu",
+	"precision" : "qasymm8",
+	"complier" : "enn_7.15",
+	"latency": "0",
+	"model_path" : "/vendor/etc/saiv/image_understanding/db/aic_classifier/aic_classifier_cnn.tflite"
+}

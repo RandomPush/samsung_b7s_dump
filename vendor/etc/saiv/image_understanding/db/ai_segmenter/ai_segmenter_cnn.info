@@ -1,0 +1,9 @@
+{
+	"version_id": "v3",
+	"tag" : "3.9",
+	"model_type" : "npu",
+	"precision" : "qasymm8",
+	"latency" : "0",
+	"compiler" : "ENN-7.14.27.21",
+	"model_path" : "/vendor/etc/saiv/image_understanding/db/ai_segmenter/ai_segmenter_cnn.tflite"
+}

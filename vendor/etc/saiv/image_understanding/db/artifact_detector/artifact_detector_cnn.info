@@ -1,0 +1,9 @@
+{
+	"version_id": "V1",
+	"tag" : "1.14",
+	"model_type" : "gpu",
+	"precision" : "float16",
+	"latency" : "0",
+	"compiler" : "gpu",
+	"model_path" : "/vendor/etc/saiv/image_understanding/db/artifact_detector/artifact_detector_cnn.tflite"
+}

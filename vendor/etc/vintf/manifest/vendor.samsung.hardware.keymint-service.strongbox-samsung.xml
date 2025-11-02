@@ -1,0 +1,11 @@
+<!--
+    Input:
+        vendor/samsung/external/vendor/kvkmc/nwd/hal/skeymint_ext/resource/vendor.samsung.hardware.keymint-service.strongbox-samsung.xml
+-->
+<manifest version="8.0" type="device">
+    <hal format="aidl">
+        <name>vendor.samsung.hardware.keymint</name>
+        <version>3</version>
+        <fqname>ISehKeyMintFactory/strongbox</fqname>
+    </hal>
+</manifest>

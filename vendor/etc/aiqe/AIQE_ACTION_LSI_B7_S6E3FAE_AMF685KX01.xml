@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AIQE version="1">
+    <!-- AIQE ACTION -->
+    <ACTION version="1">
+        <arg_types>
+            <arg_type name="S8" description="signed short integer (8bit)"/>
+            <arg_type name="U8" description="unsigned short integer (8bit)"/>
+            <arg_type name="S16" description="signed short integer (16bit)"/>
+            <arg_type name="U16" description="unsigned short integer (16bit)"/>
+            <arg_type name="S32" description="signed integer (32bit)"/>
+            <arg_type name="U32" description="unsigned integer (32bit)"/>
+            <arg_type name="STR" description="string"/>
+            <arg_type name="BA" description="byte array e.g 0123ADEF"/>
+            <arg_type name="XPATH" description="xml path e.g /TUNING/MDNIE/bypass"/>
+            <arg_type name="PATH" description="file path e.g /veodnr/etc/aiqe/xxx.bin"/>
+            <arg_type name="REG" description="xml path of register e.g /REG/MDNIE/reg[@name='mdnie']"/>
+        </arg_types>
+    
+        <methods>
+            <!--
+                This function loads XML data and stores it.
+                @arg1: Target register.
+                @arg2: Source of data.
+            -->
+            <method name="LOAD_TO_REG" arg1="REG" arg2="XPATH"/>
+
+            <!--
+                This function loads all the hex strings from the source XML path to the target register.
+                @arg1: Target register.
+                @arg2: Source of data.
+            -->
+            <method name="LOAD_ALL_TO_REG" arg1="REG" arg2="XPATH"/>
+
+            <!--
+                This function loads all unsigned int values from the specified source and converts them to hex strings.
+                @arg1: Target register.
+                @arg2: Source of data.
+            -->
+            <method name="LOAD_U32_ALL_TO_REG" arg1="REG" arg2="XPATH"/>
+
+            <!--
+                This function loads XML data to environment variable.
+                @arg1: Source of data.
+            -->
+            <method name="LOAD_TO_VAR" arg1="REG" ret="STR"/>
+
+            <!--
+                This function loads binary file data and stores it.
+                @arg1: Target register.
+                @arg2: Binary file path.
+            -->
+            <method name="LOAD_BIN" arg1="XPATH" arg2="PATH"/>
+    
+            <!--
+                This function updates a byte array.
+                @arg1: Target xml path.
+                @arg2: Byte array to be stored to target xml path.
+            -->
+            <method name="UPDATE_BA" arg1="XPATH" arg2="BA"/>
+    
+            <!--
+                This function adds 8-bit register value with an signed 8-bit value.
+                @arg1: Source and target register.
+                @arg2: Value.
+            -->
+            <method name="ADD_S8" arg1="REG" arg2="S8"/>
+
+            <!--
+                This function multiplies the current value of a register by a percentage value.
+                @arg1: Register.
+                @arg2: Percentage value (0-100).
+            -->
+            <method name="MUL_BY_PCT_U8" arg1="REG" arg2="U8"/>
+
+            <!--
+                This function find the last element less than or equal to the input value in a table.
+                And return the index of the element.
+                @arg1: xml path of the table.
+                @arg2: Value.
+            -->
+            <method name="FIND_LAST_LE_INDEX" arg1="XPATH" arg2="U32" ret="U32"/>
+        </methods>
+    
+        <actions>
+            <SET_MDNIE_MODE>
+                <TEST_MODE>
+                    <run method="LOAD_TO_REG" arg1="/AIQE/REG/MDNIE/reg[@name='mdnie']" arg2="/AIQE/TUNING/MDNIE/MODE/$1"/>
+                </TEST_MODE>
+                <BYPASS_MODE>
+                    <run method="LOAD_TO_REG" arg1="/AIQE/REG/MDNIE/reg[@name='mdnie']" arg2="/AIQE/TUNING/MDNIE/MODE/$1"/>
+                </BYPASS_MODE>
+                <COLOR_LENS_MODE>
+                    <run method="LOAD_TO_REG" arg1="/AIQE/REG/MDNIE/reg[@name='mdnie']" arg2="/AIQE/TUNING/MDNIE/MODE/$1"/>
+                    <run method="LOAD_TO_REG" arg1="/AIQE/REG/MDNIE/reg[@name='ascr_wide']" arg2="/AIQE/TUNING/MDNIE/MISC/ASCR_WIDE/$1/$2/LEVEL$3"/>
+                </COLOR_LENS_MODE>
+                <HDR_MODE>
+                    <run method="LOAD_TO_REG" arg1="/AIQE/REG/MDNIE/reg[@name='mdnie']" arg2="/AIQE/TUNING/MDNIE/MODE/$1"/>
+                </HDR_MODE>
+                <BLF_MODE>
+                    <run method="LOAD_TO_REG" arg1="/AIQE/REG/MDNIE/reg[@name='mdnie']" arg2="/AIQE/TUNING/MDNIE/MODE/$1"/>
+                </BLF_MODE>
+                <COLOR_MODE>
+                    <run method="LOAD_TO_REG" arg1="/AIQE/REG/MDNIE/reg[@name='mdnie']" arg2="/AIQE/TUNING/MDNIE/MODE/$1"/>
+                </COLOR_MODE>
+                <HBM_MODE>
+                    <run method="LOAD_TO_REG" arg1="/AIQE/REG/MDNIE/reg[@name='mdnie']" arg2="/AIQE/TUNING/MDNIE/MODE/$1/LEVEL$2"/>
+                </HBM_MODE>
+                <UI>
+                    <run method="LOAD_TO_REG" arg1="/AIQE/REG/MDNIE/reg[@name='mdnie']" arg2="/AIQE/TUNING/MDNIE/MODE/$1/$2"/>
+                </UI>
+                <VIDEO>
+                    <run method="LOAD_TO_REG" arg1="/AIQE/REG/MDNIE/reg[@name='mdnie']" arg2="/AIQE/TUNING/MDNIE/MODE/$1/$2"/>
+                </VIDEO>
+                <CAMERA>
+                    <run method="LOAD_TO_REG" arg1="/AIQE/REG/MDNIE/reg[@name='mdnie']" arg2="/AIQE/TUNING/MDNIE/MODE/$1/$2"/>
+                </CAMERA>
+                <GALLERY>
+                    <run method="LOAD_TO_REG" arg1="/AIQE/REG/MDNIE/reg[@name='mdnie']" arg2="/AIQE/TUNING/MDNIE/MODE/$1/$2"/>
+                </GALLERY>
+                <BROWSER>
+                    <run method="LOAD_TO_REG" arg1="/AIQE/REG/MDNIE/reg[@name='mdnie']" arg2="/AIQE/TUNING/MDNIE/MODE/$1/$2"/>
+                </BROWSER>
+                <EBOOK>
+                    <run method="LOAD_TO_REG" arg1="/AIQE/REG/MDNIE/reg[@name='mdnie']" arg2="/AIQE/TUNING/MDNIE/MODE/$1/$2"/>
+                </EBOOK>
+                <EMAIL>
+                    <run method="LOAD_TO_REG" arg1="/AIQE/REG/MDNIE/reg[@name='mdnie']" arg2="/AIQE/TUNING/MDNIE/MODE/$1/$2"/>
+                </EMAIL>
+                <VIDEO_BRIGHTNESS>
+                    <run method="LOAD_TO_REG" arg1="/AIQE/REG/MDNIE/reg[@name='mdnie']" arg2="/AIQE/TUNING/MDNIE/MODE/$1/$2"/>
+                </VIDEO_BRIGHTNESS>
+                <VIDEO_BRIGHTNESS_THIRD>
+                    <run method="LOAD_TO_REG" arg1="/AIQE/REG/MDNIE/reg[@name='mdnie']" arg2="/AIQE/TUNING/MDNIE/MODE/$1/$2"/>
+                </VIDEO_BRIGHTNESS_THIRD>
+            </SET_MDNIE_MODE>
+    
+            <SET_MDNIE_ASCR_WIDE>
+                <ND_MODE>
+                    <run method="LOAD_TO_REG" arg1="/AIQE/REG/MDNIE/reg[@name='ascr_wide']" arg2="/AIQE/TUNING/MDNIE/MISC/ASCR_WIDE/$1/LEVEL$2"/>
+                </ND_MODE>
+                <EC_MODE>
+                    <run method="LOAD_TO_REG" arg1="/AIQE/REG/MDNIE/reg[@name='ascr_wide']" arg2="/AIQE/TUNING/MDNIE/MISC/ASCR_WIDE/$1/LEVEL$2"/>
+                </EC_MODE>
+                <EAD_MODE>
+                    <run method="LOAD_TO_REG" arg1="/AIQE/REG/MDNIE/reg[@name='ascr_wide']" arg2="/AIQE/TUNING/MDNIE/MISC/ASCR_WIDE/$1/$2/LEVEL$3"/>
+                </EAD_MODE>
+                <BLF_MODE>
+                    <run method="LOAD_TO_REG" arg1="/AIQE/REG/MDNIE/reg[@name='ascr_wide']" arg2="/AIQE/TUNING/MDNIE/MISC/ASCR_WIDE/$1/$2/LEVEL$3"/>
+                </BLF_MODE>
+            </SET_MDNIE_ASCR_WIDE>
+            
+            <SET_MDNIE_ASCR_SKIN>
+                <run method="LOAD_TO_REG" arg1="/AIQE/REG/MDNIE/reg[@name='ascr_skin']" arg2="/AIQE/TUNING/MDNIE/MISC/ASCR_SKIN/LEVEL$1"/>
+            </SET_MDNIE_ASCR_SKIN>
+            
+            <SET_MDNIE_GC>
+                <run method="LOAD_TO_REG" arg1="/AIQE/REG/MDNIE/reg[@name='gc']" arg2="/AIQE/TUNING/MDNIE/MISC/GC/LEVEL$1"/>
+            </SET_MDNIE_GC>
+            
+            <SET_MDNIE_LINEAR_SKIN>
+                <run method="LOAD_TO_REG" arg1="/AIQE/REG/MDNIE/reg[@name='linear_skin']" arg2="/AIQE/TUNING/MDNIE/MISC/LINEAR_SKIN/$1"/>
+            </SET_MDNIE_LINEAR_SKIN>
+            
+            <SET_MDNIE_WRGB>
+                <run method="ADD_S8" arg1="/AIQE/REG/MDNIE/reg[@name='ascr_wr']" arg2="$1"/>
+                <run method="ADD_S8" arg1="/AIQE/REG/MDNIE/reg[@name='ascr_wg']" arg2="$2"/>
+                <run method="ADD_S8" arg1="/AIQE/REG/MDNIE/reg[@name='ascr_wb']" arg2="$3"/>
+            </SET_MDNIE_WRGB>
+    
+            <SET_COPR_MODE>
+                <run method="LOAD_TO_REG" arg1="/AIQE/REG/COPR/reg[@name='copr']" arg2="/AIQE/TUNING/COPR/MODE/$1"/>
+            </SET_COPR_MODE>
+    
+            <SET_SSRC_MODE>
+                <NORMAL>
+                    <run method="LOAD_TO_REG" arg1="/AIQE/REG/SSRC/reg[@name='ssrc']" arg2="/AIQE/TUNING/SSRC/MODE/$1/$2"/>
+                </NORMAL>
+                <BYPASS>
+                    <run method="LOAD_TO_REG" arg1="/AIQE/REG/SSRC/reg[@name='ssrc']" arg2="/AIQE/TUNING/SSRC/MODE/$1/$2"/>
+                </BYPASS>
+            </SET_SSRC_MODE>
+
+            <SET_SSRC_IMAGE>
+                <run method="LOAD_BIN" arg1="/AIQE/REG/SSRC_IMG/reg[@name='ssrc_img']" arg2="/vendor/etc/aiqe/AIQE_SSRC_IMG_LSI_B7_S6E3FAE_AMF685KX01.bin"/>
+            </SET_SSRC_IMAGE>
+
+            <SET_SSRC_TEST_IMAGE>
+                <run method="LOAD_BIN" arg1="/AIQE/REG/SSRC_IMG/reg[@name='ssrc_img']" arg2="$1"/>
+            </SET_SSRC_TEST_IMAGE>
+    
+            <SET_ABC_MODE>
+                <run method="LOAD_TO_REG" arg1="/AIQE/REG/ABC/reg[@name='abc']" arg2="/AIQE/TUNING/ABC/MODE/$1"/>
+            </SET_ABC_MODE>
+
+            <SET_ABC_IMAGE>
+                <run method="LOAD_BIN" arg1="/AIQE/REG/ABC_IMG/reg[@name='abc_img']" arg2="/efs/afc/AIQE_LSI_ABC_B7_S6E3FAE_AMF685KX01_main.bin"/>
+            </SET_ABC_IMAGE>
+
+            <SET_UDC_IMAGE>
+                <run method="LOAD_BIN" arg1="/AIQE/REG/UDC_IMG/reg[@name='udc_img']" arg2="/efs/afc/AIQE_LSI_ABC_B7_S6E3FAE_AMF685KX01_udc.bin"/>
+            </SET_UDC_IMAGE>
+
+            <SET_ABC_TEST_IMAGE>
+                <run method="LOAD_BIN" arg1="/AIQE/REG/ABC_IMG/reg[@name='abc_img']" arg2="$1"/>
+            </SET_ABC_TEST_IMAGE>
+
+            <SET_UDC_TEST_IMAGE>
+                <run method="LOAD_BIN" arg1="/AIQE/REG/UDC_IMG/reg[@name='udc_img']" arg2="$1"/>
+            </SET_UDC_TEST_IMAGE>
+    
+            <SET_ABC_SCALE>
+                <run method="FIND_LAST_LE_INDEX" arg1="/AIQE/TUNING/ABC/SCREEN_BRIGHTNESS_BACKLIGHT/ITEM" arg2="$2" ret="lum_idx"/>
+                <run method="LOAD_TO_VAR" arg1="/AIQE/TUNING/ABC/SCALE_FACTOR/DEBURN_LUMINANCE_LEVEL/ITEM[$lum_idx]" ret="lum_val" />
+                <run method="LOAD_TO_REG" arg1="/AIQE/REG/ABC/reg[@name='scale_abc']" arg2="/AIQE/TUNING/ABC/SCALE_FACTOR/$1/LUMINANCE_$lum_val"/>
+            </SET_ABC_SCALE>
+
+            <SET_SCALE_FACTOR>
+                <run method="LOAD_U32_ALL_TO_REG" arg1="/AIQE/REG/SCALE_FACTOR/reg[@name='header']" arg2="/AIQE/TUNING/ABC/SCALE_FACTOR/HEADER"/>
+                <run method="LOAD_U32_ALL_TO_REG" arg1="/AIQE/REG/SCALE_FACTOR/reg[@name='brt_map']" arg2="/AIQE/TUNING/ABC/SCALE_FACTOR/SCREEN_BRIGHTNESS_BACKLIGHT"/>
+                <run method="LOAD_ALL_TO_REG" arg1="/AIQE/REG/SCALE_FACTOR/reg[@name='abc_scale_factor']" arg2="/AIQE/TUNING/ABC/SCALE_FACTOR/NORMAL"/>
+            </SET_SCALE_FACTOR>
+
+            <INIT>
+                <run method="LOAD_TO_REG" arg1="/AIQE/REG/COPR/reg[@name='copr']" arg2="/AIQE/TUNING/COPR/MODE/ON"/>
+                <run method="LOAD_BIN" arg1="/AIQE/REG/SSRC_IMG/reg[@name='ssrc_img']" arg2="/vendor/etc/aiqe/AIQE_SSRC_IMG_LSI_B7_S6E3FAE_AMF685KX01.bin"/>
+                <run method="LOAD_TO_REG" arg1="/AIQE/REG/SSRC/reg[@name='ssrc']" arg2="/AIQE/TUNING/SSRC/MODE/NORMAL/ON"/>
+                <run method="LOAD_BIN" arg1="/AIQE/REG/ABC_IMG/reg[@name='abc_img']" arg2="/efs/afc/AIQE_LSI_ABC_B7_S6E3FAE_AMF685KX01_main.bin"/>
+                <run method="LOAD_TO_REG" arg1="/AIQE/REG/ABC/reg[@name='abc']" arg2="/AIQE/TUNING/ABC/MODE/NORMAL"/>
+                <run method="LOAD_U32_ALL_TO_REG" arg1="/AIQE/REG/SCALE_FACTOR/reg[@name='header']" arg2="/AIQE/TUNING/ABC/SCALE_FACTOR/HEADER"/>
+                <run method="LOAD_U32_ALL_TO_REG" arg1="/AIQE/REG/SCALE_FACTOR/reg[@name='brt_map']" arg2="/AIQE/TUNING/ABC/SCALE_FACTOR/SCREEN_BRIGHTNESS_BACKLIGHT"/>
+                <run method="LOAD_ALL_TO_REG" arg1="/AIQE/REG/SCALE_FACTOR/reg[@name='abc_scale_factor']" arg2="/AIQE/TUNING/ABC/SCALE_FACTOR/NORMAL"/>
+            </INIT>
+        </actions>
+    </ACTION>
+</AIQE>

@@ -1,0 +1,11 @@
+<!--
+    Input:
+        vendor/samsung/external/vendor/kvkmc/nwd/hal/android.hardware.security.keymint-service.strongbox-knoxvault.xml
+-->
+<manifest version="8.0" type="device">
+    <hal format="aidl">
+        <name>android.hardware.security.keymint</name>
+        <version>3</version>
+        <fqname>IKeyMintDevice/strongbox</fqname>
+    </hal>
+</manifest>

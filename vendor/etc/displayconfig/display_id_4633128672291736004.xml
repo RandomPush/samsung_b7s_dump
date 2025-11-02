@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<displayConfiguration>
+  <screenBrightnessMap>
+    <point>
+      <value>0.0</value>
+      <nits>0.0</nits>
+    </point>
+    <point>
+      <value>1.0</value>
+      <nits>1500.0</nits>
+    </point>
+  </screenBrightnessMap>
+
+  <densityMapping>
+      <density>
+          <height>3200</height>
+          <width>1440</width>
+          <density>560</density>
+      </density>
+      <density>
+          <height>2400</height>
+          <width>1080</width>
+          <density>420</density>
+      </density>
+      <density>
+        <height>1600</height>
+        <width>720</width>
+        <density>280</density>
+    </density>
+  </densityMapping>
+</displayConfiguration>
