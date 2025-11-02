@@ -1,0 +1,131 @@
+{
+    "deviceName": "exynos2500_common",
+    "HumanAwareEngine": {
+        "Perf_mode_preview": "PERFMODE_LOW",
+        "Perf_mode_capture": "PERFMODE_LOW",
+        "Perf_mode_SDK": "PERFMODE_LOW",
+        "bloom_ev_tuning": "true"
+    },
+    "BeautyEngine": {
+        "mode_preview": null,
+        "mode_capture": "BEAUTY_SINGLEBLUR_CAPTURE"
+    },
+    "RelightingEngine": {
+        "Perf_mode_preview": null,
+        "mode_preview": "v2",
+        "mode_capture": "v2",
+        "loc_preview": "vendor",
+        "loc_capture": "system"
+    },
+    "LD_FD_engine": {
+        "mode_preview": null,
+        "mode_capture": "default"
+    },
+    "HW_FD_engine": {
+        "mode_preview": "true"
+    },
+    "GlassSegSDK": {
+        "mode_preview": null,
+        "mode_capture": "default"
+    },
+    "ModelPreLoadMode": {
+        "depth": "true"
+    },
+    "capture_bokeh": {
+        "Weightfile": "/system/cameradata/portrait_data/SRIB_BokehNet_FP16_V013_ex2500_enn2322b.nnc",
+        "Version": "013",
+        "ComputeUnit": "COMPUTE_NPU",
+        "ExecutionDataType": "FLOAT16",
+        "ModelType": "MODEL_TYPE_E2E_BOKEH_NET",
+        "ModelFormat": "EDEN",
+        "Encryption": "false",
+        "input_size": [[1408, 1408]]
+    },
+    "capture_refine": {
+        "Weightfile": "/system/cameradata/portrait_data/SRIB_RefineNet_INT8_V007_ex2500_enn2322b.nnc",
+        "Version": "007",
+        "ComputeUnit": "COMPUTE_NPU",
+        "ExecutionDataType": "QASYMM8",
+        "ModelType": "MODEL_TYPE_E2E_REFINE_NET",
+        "ModelFormat": "EDEN",
+        "Encryption": "false",
+        "input_size": [[3456, 3456]]
+    },
+    "preview_1st_segmentation": {
+        "Weightfile": "/vendor/etc/portrait_data/SRIB_ClatNetLite_FP16_V005_ex2500_enn2318b.nnc",
+        "Version": "005",
+        "ComputeUnit": "COMPUTE_NPU",
+        "ExecutionDataType": "FLOAT16",
+        "ModelType": "MODEL_TYPE_OBJ_INSTANCE_VIDEO",
+        "ModelFormat": "EDEN",
+        "Encryption": "false",
+        "FadeEffectTime": 500,
+        "TransitionEffectTime": 300,
+        "input_size": [[384, 384], [384, 384], [384, 384], [384, 384]],
+        "effects_supported": [0, 1, 2, 6, 10, 11, 12, 13, 14, 15]
+    },    
+    "generic_single_depth": {
+        "Weightfile": "/system/cameradata/portrait_data/SRIB_GSD_FP16_V005_ex2500_enn2322a.nnc",
+        "Version": "005",
+        "ComputeUnit": "COMPUTE_NPU",
+        "ExecutionDataType": "FLOAT16",
+        "ModelType": "MODEL_TYPE_GENERIC_SID",
+        "ModelFormat": "EDEN",
+        "Encryption": "false",
+        "input_size": [[518, 518], [518, 518], [518, 518], [518, 518]]
+    },   
+    "generic_bokeh": {
+        "Weightfile": "/system/cameradata/portrait_data/SRIB_GenericBokehNet_FP16_V002_ex2500_enn2322b.nnc",
+        "Version": "002",
+        "ComputeUnit": "COMPUTE_NPU",
+        "ExecutionDataType": "FLOAT16",
+        "ModelType": "MODEL_TYPE_E2E_GENERIC_BOKEH_NET",
+        "ModelFormat": "EDEN",
+        "Encryption": "false",
+        "input_size": [[1408, 1408], [1408, 1408], [1408, 1408], [1408, 1408]]
+    },
+    "generic_refine": {
+        "Weightfile": "/system/cameradata/portrait_data/SRIB_GenericRefineNet_INT8_V002_ex2500_enn239o.nnc",
+        "Version": "002",
+        "ComputeUnit": "COMPUTE_NPU",
+        "ExecutionDataType": "QASYMM8",
+        "ModelType": "MODEL_TYPE_E2E_GENERIC_REFINE_NET",
+        "ModelFormat": "EDEN",
+        "Encryption": "false",
+        "input_size": [[3456, 3456], [3456, 3456], [3456, 3456], [3456, 3456]]
+    },
+    "capture_segmentation": {
+        "Weightfile": "/system/cameradata/portrait_data/SRIB_ClatNet_FP16_V005_ex2500_enn2318b.nnc",
+        "Version": "005",
+        "ComputeUnit": "COMPUTE_NPU",
+        "ExecutionDataType": "FLOAT16",
+        "ModelType": "MODEL_TYPE_OBJ_INSTANCE_VIDEO",
+        "ModelFormat": "EDEN",
+        "Encryption": "false",
+        "input_size": [[448, 448], [448, 448], [448, 448], [448, 448]]
+    },
+    "bot_classifier": {
+        "Weightfile": "/system/cameradata/portrait_data/SRIB_BOT_FP16_V002_ex2500_enn239n.nnc",
+        "Version": "002",
+        "ComputeUnit": "COMPUTE_NPU",
+        "ExecutionDataType": "FLOAT16",
+        "ModelType": "MODEL_TYPE_CLASSIFIER_BOT",
+        "ModelFormat": "EDEN",
+        "Encryption": "false",
+        "input_size": [[512, 512]]
+    },
+    "saliency": {
+        "Weightfile": "/vendor/etc/singletake/saliency/FixPNet.nnc",
+        "Version": "000",
+        "ComputeUnit": "COMPUTE_NPU",
+        "ExecutionDataType": "QASYMM8",
+        "ModelType": "MODEL_TYPE_SALIENCY",
+        "ModelFormat": "EDEN",
+        "Encryption": "false",
+        "input_size": [[240, 240]]
+    },
+    "pet_support_camera" : true,
+    "pet_support_add_portrait" : true,
+    "E2ECapture" : true,
+    "abortable" : false
+}

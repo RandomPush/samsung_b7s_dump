@@ -1,0 +1,7 @@
+<permissions>
+    <privapp-permissions package="com.samsung.oda.agent">
+        <permission name="android.permission.READ_PRIVILEGED_PHONE_STATE" />
+        <permission name="com.samsung.oda.ODA_SERVICE_ACCESS" />
+        <permission name="android.permission.MODIFY_PHONE_STATE" />
+    </privapp-permissions>
+</permissions>

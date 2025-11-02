@@ -1,0 +1,6 @@
+<permissions>
+  <privapp-permissions package="com.samsung.android.aicore">
+    <permission name="android.permission.REAL_GET_TASKS"/>
+    <permission name="android.permission.WRITE_SECURE_SETTINGS"/>
+  </privapp-permissions>
+</permissions>
